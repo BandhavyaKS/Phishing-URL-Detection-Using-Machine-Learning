@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing URL Checker</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Roboto', sans-serif; background: linear-gradient(135deg, #6b73ff, #000dff); color: #fff; }
+        nav { position: sticky; top: 0; background: #333; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; z-index: 1000; }
+        nav .logo { font-size: 1.5rem; font-weight: bold; color: #fff; }
+        nav ul { list-style: none; display: flex; gap: 1.5rem; }
+        nav ul li a { color: #fff; text-decoration: none; font-size: 1rem; transition: color 0.3s; }
+        nav ul li a:hover { color: #6b73ff; }
+        section { padding: 5rem 2rem; text-align: center; }
+        section#home { background: linear-gradient(135deg, #6b73ff, #000dff); color: #fff; }
+        section#about, section#project, section#contact { background: #fff; color: #333; }
+        h1, h2 { margin-bottom: 1rem; }
+        p { font-size: 1rem; line-height: 1.6; max-width: 600px; margin: 0 auto; }
+        .checker-container { background: #fff; color: #333; padding: 2rem; border-radius: 16px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); max-width: 480px; margin: 2rem auto; }
+        input[type="url"] { width: 100%; padding: 0.8rem; border: 2px solid #ddd; border-radius: 8px; font-size: 1rem; outline: none; margin-bottom: 1rem; }
+        button { background: linear-gradient(135deg, #007bff, #0056b3); color: #fff; padding: 0.8rem; border: none; border-radius: 8px; font-size: 1rem; cursor: pointer; width: 100%; transition: background 0.3s; }
+        button:hover { background: linear-gradient(135deg, #0056b3, #003b80); }
+        .loading { display: none; font-size: 1rem; color: #007bff; margin-top: 1rem; }
+        .loading.active { display: block; }
+        .prediction { margin-top: 1.5rem; font-size: 1.1rem; padding: 0.75rem; border-radius: 4px; text-align: center; font-weight: bold; }
+        .safe { color: #28a745; background-color: #e6f4ea; }
+        .phishing { color: #dc3545; background-color: #f8d7da; }
+        .history { margin-top: 1.5rem; text-align: left; }
+        .history h4 { margin-bottom: 0.75rem; }
+        .history ul { list-style: none; padding-left: 0; }
+        .history li { padding: 0.4rem 0; border-bottom: 1px solid #eee; }
+        .dashboard-link { display: inline-block; margin-top: 1rem; color: #0056b3; text-decoration: none; font-weight: bold; }
+        .dashboard-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Phishing Checker</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#project">Our Project</a></li>
+            <li><a href="#contact">Contact Info</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1>Welcome to Phishing URL Checker</h1>
+        <p>Your safety online starts here. Check URLs for phishing threats with our powerful tool.</p>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We are a dedicated team of Engineering students passionate about improving online safety. This tool uses advanced machine learning models to detect phishing URLs and protect users.</p>
+    </section>
+
+    <section id="project">
+        <h2>Our Project</h2>
+        <p>The Phishing URL Checker is built using Django.</p>
+        <div class="checker-container">
+            <h3>Phishing URL Checker</h3>
+            <form id="urlForm" method="post">
+                {% csrf_token %}
+                <input type="url" name="url" id="url" placeholder="https://example.com" required>
+                <button type="submit">Check URL</button>
+            </form>
+            <div class="loading" id="loadingSpinner">Checking URL...</div>
+            {% if prediction %}
+                <div class="prediction {% if prediction == 'Phishing' %}phishing{% else %}safe{% endif %}">
+                    Prediction: {{ prediction }}
+                </div>
+            {% endif %}
+            <a class="dashboard-link" href="/dashboard/">View Dashboard</a>
+            <div class="history">
+                <h4>Recent Checks</h4>
+                <ul>
+                    {% for item in recent_checks %}
+                        <li>{{ item.url }} - <strong>{{ item.prediction }}</strong></li>
+                    {% empty %}
+                        <li>No checks yet.</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Info</h2>
+        <p>Reach out to us for inquiries, collaborations, or support:</p>
+        <p>Email: contact@phishingchecker.com</p>
+        <p>Phone: 9876543210</p>
+    </section>
+
+    <script>
+        const form = document.getElementById('urlForm');
+        const loadingSpinner = document.getElementById('loadingSpinner');
+        if (form) {
+            form.addEventListener('submit', () => {
+                loadingSpinner.classList.add('active');
+            });
+        }
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>

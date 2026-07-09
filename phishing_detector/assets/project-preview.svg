@@ -1,0 +1,52 @@
+<svg width="1400" height="900" viewBox="0 0 1400 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f46e5"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#eef2ff"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="900" fill="#f8fafc"/>
+  <rect x="40" y="40" width="1320" height="820" rx="28" fill="url(#bg)"/>
+
+  <rect x="90" y="90" width="1220" height="80" rx="16" fill="#111827" opacity="0.9"/>
+  <text x="130" y="138" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="700" fill="#ffffff">Phishing Checker</text>
+  <rect x="960" y="118" width="95" height="16" rx="8" fill="#818cf8"/>
+  <rect x="1070" y="118" width="95" height="16" rx="8" fill="#818cf8"/>
+  <rect x="1180" y="118" width="95" height="16" rx="8" fill="#818cf8"/>
+
+  <rect x="120" y="220" width="500" height="230" rx="24" fill="url(#card)"/>
+  <text x="155" y="270" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="700" fill="#1f2937">Check Any URL</text>
+  <text x="155" y="312" font-family="Segoe UI, Arial, sans-serif" font-size="20" fill="#6b7280">Enter a URL and get a phishing prediction instantly.</text>
+  <rect x="155" y="340" width="300" height="48" rx="12" fill="#e5e7eb"/>
+  <rect x="155" y="405" width="180" height="20" rx="10" fill="#2563eb"/>
+  <rect x="155" y="438" width="120" height="14" rx="7" fill="#94a3b8"/>
+
+  <rect x="710" y="220" width="560" height="230" rx="24" fill="url(#card)"/>
+  <text x="750" y="270" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" fill="#1f2937">Dashboard Summary</text>
+  <rect x="750" y="305" width="140" height="90" rx="16" fill="#2563eb"/>
+  <text x="778" y="338" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#ffffff">Total</text>
+  <text x="790" y="368" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">120</text>
+  <rect x="920" y="305" width="140" height="90" rx="16" fill="#dc2626"/>
+  <text x="956" y="338" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#ffffff">Phishing</text>
+  <text x="972" y="368" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">48</text>
+  <rect x="1090" y="305" width="140" height="90" rx="16" fill="#16a34a"/>
+  <text x="1116" y="338" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#ffffff">Safe</text>
+  <text x="1134" y="368" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">72</text>
+
+  <rect x="120" y="500" width="1150" height="280" rx="24" fill="url(#card)"/>
+  <text x="155" y="550" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" fill="#1f2937">Recent URL Checks</text>
+  <line x1="155" y1="590" x2="1160" y2="590" stroke="#e5e7eb" stroke-width="2"/>
+  <rect x="155" y="620" width="780" height="18" rx="9" fill="#e5e7eb"/>
+  <rect x="155" y="655" width="650" height="18" rx="9" fill="#e5e7eb"/>
+  <rect x="155" y="690" width="720" height="18" rx="9" fill="#e5e7eb"/>
+  <rect x="960" y="620" width="120" height="24" rx="12" fill="#dc2626"/>
+  <rect x="960" y="655" width="120" height="24" rx="12" fill="#16a34a"/>
+  <rect x="960" y="690" width="120" height="24" rx="12" fill="#dc2626"/>
+
+  <text x="120" y="830" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#f8fafc">Professional Django + Machine Learning Phishing Detection App</text>
+</svg>
