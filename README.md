@@ -21,10 +21,15 @@ This project combines:
 ## Screenshots
 
 Here is a preview of the project interface and dashboard:
+## Dashboard
 
-![Phishing Checker Dashboard](assets/project-preview.svg)
+The dashboard provides a visual summary of the phishing URL detection system, including project workflow, model performance, prediction metrics, and technology stack.
 
-This image highlights the URL checker, dashboard summary, and recent URL checks experience.
+<p align="center">
+  <img src="assets/Phishing_detector_Dashboard.png"
+       alt="Phishing URL Detection Dashboard"
+       width="100%">
+</p>
 
 ## Tech Stack
 
