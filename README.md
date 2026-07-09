@@ -25,12 +25,13 @@ Here is a preview of the project interface and dashboard:
 
 The dashboard provides a visual summary of the phishing URL detection system, including project workflow, model performance, prediction metrics, and technology stack.
 
+## Dashboard
+
 <p align="center">
-  <img src="assets/Phishing_detector_Dashboard.png"
+  <img src="Phishing_detector_Dashboard.png"
        alt="Phishing URL Detection Dashboard"
        width="100%">
 </p>
-
 ## Tech Stack
 
 - Python
