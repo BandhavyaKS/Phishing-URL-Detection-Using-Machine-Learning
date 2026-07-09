@@ -32,6 +32,7 @@ The dashboard provides a visual summary of the phishing URL detection system, in
        alt="Phishing URL Detection Dashboard"
        width="100%">
 </p>
+
 ## Tech Stack
 
 - Python
